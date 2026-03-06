@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2E7D32;
+  --color-secondary: #FF6D00;
+  --color-background: #F9FBE7;
+  --font-sans: "Pretendard", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-slate-900 font-sans antialiased;
+    font-size: 18px; /* Larger base font for 50+ target */
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+.markdown-body {
+  @apply leading-relaxed;
+}
+
+.cta-shadow {
+  box-shadow: 0 10px 25px -5px rgba(255, 109, 0, 0.4);
+}

@@ -1,0 +1,22 @@
+{
+  "entities": {
+    "Applicant": {
+      "title": "무료체험 신청자",
+      "description": "식물성 MSM 무료체험을 신청한 사용자 정보",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "신청자 이름" },
+        "phone": { "type": "string", "description": "연락처" },
+        "address": { "type": "string", "description": "배송 주소" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "신청 일시" }
+      },
+      "required": ["name", "phone", "address", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/applicants/{applicantId}": {
+      "schema": "Applicant",
+      "description": "신청자 정보 컬렉션"
+    }
+  }
+}
